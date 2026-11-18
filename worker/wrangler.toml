@@ -14,8 +14,9 @@ GEMINI_FALLBACK_MODEL = "gemini-3.7-flash"
 GEMINI_THINKING = "low"
 ANTHROPIC_MODEL = "claude-sonnet-5-5"
 ANTHROPIC_EFFORT = "medium"
-# Sites allowed to call this Worker. Add your custom domain here later if you get one.
-ALLOWED_ORIGINS = "https://the-ljaw.github.io"
+# Sites allowed to call this Worker. theludarium.com serves the app; the old
+# the-ljaw.github.io address only forwards there now.
+ALLOWED_ORIGINS = "https://theludarium.com,https://the-ljaw.github.io"
 RATE_LIMIT_PER_MINUTE = "30"
 
 # Secrets are never stored in this file. Set them with:

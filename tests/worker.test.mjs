@@ -4,7 +4,7 @@ import worker, { _internal } from '../worker/worker.js';
 import { startMocks } from './mock-upstream.mjs';
 
 const mocks = await startMocks(0, { slow: 1 });
-const ORIGIN = 'https://the-ljaw.github.io';
+const ORIGIN = 'https://theludarium.com';
 const baseEnv = {
   PROVIDER: 'anthropic',
   ANTHROPIC_API_KEY: 'test-anthropic-key',

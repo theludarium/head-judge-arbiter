@@ -2,7 +2,9 @@
 
 A friendly Magic: The Gathering rules judge for the table. Ask a question mid-game and the judge looks up the current Oracle text and official rulings for every card you mention, checks the Comprehensive Rules, and then gives a plain-English ruling with the rule numbers it relied on.
 
-**Live app:** https://the-ljaw.github.io/head-judge-arbiter/
+**Live app:** https://theludarium.com/head-judge-arbiter/
+
+The Ludarium's website includes this repo as a submodule and serves it at `/head-judge-arbiter/`, with the site's bar and analytics added at build time (see `scripts/head-judge-arbiter.mjs` in `theludarium/website`). Each site build also pulls the newest `data/rules.json` from `main`. GitHub Pages for this repo is off, and the old `the-ljaw.github.io/head-judge-arbiter/` address forwards to theludarium.com.
 
 ## What it does
 
@@ -17,7 +19,7 @@ A friendly Magic: The Gathering rules judge for the table. Ask a question mid-ga
 ## How it's put together
 
 ```
-Phone / browser (GitHub Pages, free)
+Phone / browser (theludarium.com, Cloudflare Pages)
   ├─ Rulebook search runs locally (data/rules.json)
   ├─ Card lookups go straight to Scryfall (free, no key)
   └─ Questions go to ──> Cloudflare Worker (free) ──> Gemini or Claude
@@ -47,7 +49,7 @@ Go to [Google AI Studio](https://aistudio.google.com/apikey), sign in, and click
    | Type | Name | Value |
    |---|---|---|
    | Secret | `GEMINI_API_KEY` | the key from step 2 |
-   | Text | `ALLOWED_ORIGINS` | `https://the-ljaw.github.io` |
+   | Text | `ALLOWED_ORIGINS` | `https://theludarium.com` (comma-separate more sites) |
    | Secret (optional) | `ACCESS_CODE` | a passcode for your group, e.g. `cubecommonwealth` |
 
 5. Copy the Worker's URL (it looks like `https://head-judge-arbiter.<your-name>.workers.dev`). Open it in a browser and add `/health` to the end. You should see `"ok": true` and "On duty."

@@ -32,7 +32,7 @@ const DEFAULTS = {
   // "low" keeps rulings quick at the table; the model's default (medium) can take 20 to 30
   // seconds per lookup round.
   GEMINI_THINKING: 'low',
-  ALLOWED_ORIGINS: 'https://the-ljaw.github.io',
+  ALLOWED_ORIGINS: 'https://theludarium.com',
   RATE_LIMIT_PER_MINUTE: '30',
   ANTHROPIC_EFFORT: 'medium',
   // Room for the model's private reasoning plus the answer. Only tokens actually used are billed.

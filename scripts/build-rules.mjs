@@ -21,7 +21,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'data', 'rules.json');
 const RULES_PAGE = 'https://magic.wizards.com/en/rules';
 const MIRROR = 'https://raw.githubusercontent.com/nwgarne/mtg-data/main/rules/cr-raw.txt';
-const UA = 'HeadJudgeArbiter/1.0 (+https://github.com/The-LJAW/head-judge-arbiter)';
+const UA = 'HeadJudgeArbiter/1.0 (+https://github.com/theludarium/head-judge-arbiter)';
 
 function decode(buf) {
   let bytes = new Uint8Array(buf);
